@@ -2,36 +2,36 @@ CREATE SCHEMA development;
 USE development;
 
 CREATE TABLE developers(
-	id 			INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	first_name  VARCHAR(50) NOT NULL,
-	last_name 	VARCHAR(50) NOT NULL,
-	age 		INT,
-	sex 		ENUM('female', 'male')
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	age INT,
+	sex ENUM('female', 'male')
 );
 
 CREATE TABLE skills(
-	id 					INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	branch_development 	VARCHAR(30) NOT NULL,
-	skills_level 		VARCHAR(30) NOT NULL
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	branch_development VARCHAR(30) NOT NULL,
+	skills_level VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE projects(
-	id 	 INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
 	name VARCHAR(50) NOT NULL,
 	info VARCHAR(100)
 );
 
 CREATE TABLE companies(
-	id	 INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
 	name VARCHAR(50) NOT NULL,
 	info VARCHAR(100)
 );
 
 CREATE TABLE customers(
-	id 			INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	first_name 	VARCHAR(50) NOT NULL,
-	last_name 	VARCHAR(50) NOT NULL,
-	info 		VARCHAR(100)
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	info VARCHAR(100)
 );
 
 CREATE TABLE developer_projects(
