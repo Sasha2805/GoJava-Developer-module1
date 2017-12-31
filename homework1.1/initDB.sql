@@ -36,7 +36,7 @@ CREATE TABLE customers(
 
 CREATE TABLE developer_projects(
 	developer_id INT NOT NULL,
-	project_id	 INT NOT NULL,
+	project_id INT NOT NULL,
 	PRIMARY KEY(developer_id, project_id),
 	FOREIGN KEY(developer_id) REFERENCES developers (id),
 	FOREIGN KEY(project_id) REFERENCES projects (id)
@@ -44,7 +44,7 @@ CREATE TABLE developer_projects(
 
 CREATE TABLE developer_skills(
 	developer_id INT NOT NULL,
-	skill_id	 INT NOT NULL,
+	skill_id INT NOT NULL,
 	PRIMARY KEY(developer_id, skill_id),
 	FOREIGN KEY(developer_id) REFERENCES developers (id),
 	FOREIGN KEY(skill_id) REFERENCES skills (id)
@@ -60,7 +60,7 @@ CREATE TABLE company_projects(
 
 CREATE TABLE customer_projects(
 	customer_id INT NOT NULL,
-	project_id 	INT NOT NULL,
+	project_id INT NOT NULL,
 	PRIMARY KEY(customer_id, project_id),
 	FOREIGN KEY(customer_id) REFERENCES customers (id),
 	FOREIGN KEY(project_id) REFERENCES projects (id)
