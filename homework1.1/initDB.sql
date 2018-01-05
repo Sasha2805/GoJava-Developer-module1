@@ -12,7 +12,8 @@ CREATE TABLE developers(
 CREATE TABLE skills(
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	branch_development VARCHAR(30) NOT NULL,
-	skills_level VARCHAR(30) NOT NULL
+	skills_level VARCHAR(30) NOT NULL,
+	UNIQUE (branch_development, skills_level)
 );
 
 CREATE TABLE projects(
