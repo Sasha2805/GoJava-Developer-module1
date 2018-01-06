@@ -5,7 +5,8 @@ ALTER TABLE developers ADD salary DECIMAL(10, 2);
 
 CREATE TABLE developers_salary(
 	developer_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	salary DECIMAL(10, 2)
+	salary DECIMAL(10, 2),
+	FOREIGN KEY(developer_id) REFERENCES developers (id)
 );
 
 INSERT INTO developers_salary(developer_id, salary) 
@@ -18,6 +19,6 @@ VALUES
 
 UPDATE developers, developers_salary 
 SET developers.salary = developers_salary.salary
-WHERE id = developers_salary.developer_id;
+WHERE developers.id = developers_salary.developer_id;
 
 DROP TABLE developers_salary;
