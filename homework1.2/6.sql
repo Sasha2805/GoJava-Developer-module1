@@ -8,7 +8,7 @@ INNER JOIN developer_projects
 ON developers.id = developer_projects.developer_id
 
 INNER JOIN projects 
-ON projects.id = developer_projects.project_id
+ON developer_projects.project_id  = projects.id
 
-WHERE projects.cost = (SELECT MIN(cost) FROM projects)
+WHERE projects.cost = (SELECT MIN(DISTINCT cost) FROM projects)
 GROUP BY projects.name;
