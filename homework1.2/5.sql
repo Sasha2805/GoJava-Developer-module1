@@ -2,5 +2,5 @@
 USE development;
 
 SELECT MIN(DISTINCT cost) AS min_project_cost
-FROM projects
+FROM projects;
  
